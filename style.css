@@ -3,7 +3,7 @@ body {
   height: 100 vh;
   margin: 0;
   background-color: red;
-  color: rgba(255, 255, 255, 0.909);
+  color: rgba(59, 56, 49, 0.909);
   min-width: 100%;
   font-size: 40px;
 }
@@ -28,34 +28,28 @@ body {
   min-width: 80%;
   height: 100vh;
   scroll-behavior: smooth;
-  color: rgba(255, 255, 255, 0.909);
-}
-
-#page1 {
+  color: rgba(209, 200, 176, 0.909);
   background-color: rgb(22, 28, 28);
 }
-#page1 #Keino {
+
+#home {
+  background-color: rgb(22, 28, 28);
+}
+#home #about {
+  display: none;
+}
+#home #Keino {
   font-size: 150px;
   color: #FFB03A;
   font-family: "Telford Town", sans-serif;
   letter-spacing: 0px;
 }
-#page1 #splash {
-  color: rgba(241, 234, 208, 0.978);
+#home #splash {
   font-style: italic;
-}
-
-#page2 {
-  background-color: rgb(39, 39, 39);
-}
-
-#page3 {
-  background-color: rgb(246, 199, 27);
 }
 
 /*Sentence*/
 .sentence {
-  color: rgba(255, 255, 255, 0.909);
   text-align: left;
 }
 
@@ -239,4 +233,234 @@ body, .nav, .menu {
 
 .nav input:checked ~ span:nth-child(3) {
   transform: translateY(0) rotate(45deg);
+}
+
+#link {
+  color: #06c5cc;
+  display: block;
+  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+#link:hover {
+  color: #FFB03A;
+}
+
+#link, #link:hover {
+  transition: color 0.5s ease-out;
+}
+
+/** BEGIN CSS **/
+body {
+  background: #333333;
+}
+
+@keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes loading-text-opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loading-text-opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loading-container,
+.loading {
+  height: 300px;
+  position: relative;
+  width: 300px;
+  border-radius: 100%;
+}
+
+.loading-container {
+  position: relative;
+  text-align: center;
+  right: 0px;
+  left: 0px;
+}
+
+#wrapper {
+  font-size: 17px;
+  position: relative;
+  background-image: linear-gradient(60deg, #cf39fd, #FFB03A, rgb(12, 195, 223));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.loading {
+  border: 2px solid transparent;
+  border-color: transparent #fff transparent #FFF;
+  -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: rotate-loading 1.5s linear 0s infinite normal;
+  -o-transform-origin: 50% 50%;
+  -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+  -webkit-transform-origin: 50% 50%;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+  transform-origin: 50% 50%;
+}
+
+.loading-container:hover .loading {
+  border-color: transparent #FFB03A transparent #FFB03A;
+}
+
+.loading-container:hover .loading,
+.loading-container .loading {
+  transition: all 0.5s ease-in-out;
+}
+
+#loading-text {
+  -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+  animation: loading-text-opacity 2s linear 0s infinite normal;
+  font-family: "Helvetica Neue, " Helvetica ", " "arial";
+  font-weight: bold;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  list-style: none;
+  background-image: linear-gradient(60deg, #cf39fd, #FFB03A, rgb(12, 195, 223));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+#loading-text #loadingIdeas {
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+body {
+  background: #111;
+}
+
+#about {
+  box-sizing: border-box;
+}
+
+.horizontal-scroll-wrapper {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: calc(250px + 1px);
+  max-height: 750px;
+  margin: 0;
+  padding-top: 1px;
+  background: #abc;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-250px);
+  transform-origin: right top;
+}
+.horizontal-scroll-wrapper > div {
+  display: block;
+  padding: 5px;
+  background: #cab;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.squares {
+  padding: 250px 0 0 0;
+}
+.squares > div {
+  width: 250px;
+  height: 250px;
+  margin: 10px 0;
 }/*# sourceMappingURL=style.css.map */
