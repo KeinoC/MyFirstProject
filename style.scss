@@ -3,13 +3,23 @@
 
 body {
     width: 100vw;
-    height: 100 vh;
+    height: 100vh;
     margin: 0;
     background-color: red;
     color: rgba(59, 56, 49, 0.909);
     min-width: 100%;
     font-size: 40px;
+    ::-webkit-scrollbar {
+        display: hidden;
+    }
+}
 
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 
@@ -19,11 +29,9 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-}
 
-.pages {
-    padding-left: 10%;
-    padding-right: 10%;
+
+    .pages {
     display: flex;
     overflow:auto;
     scroll-snap-align: start;
@@ -34,14 +42,20 @@ body {
     scroll-behavior: smooth;
     color: rgba(209, 200, 176, 0.909);
     background-color: rgb(22, 28, 28);
-} 
+    ::-webkit-scrollbar {
+        display: hidden;
+    }
+    }
+
+    #loanCalculator {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
 
 
 #home {
-    background-color: rgb(22, 28, 28);
-    #about {
-        display: none;
-    }
 
     #Keino {
         font-size: 150px;
@@ -53,9 +67,8 @@ body {
         font-style: italic;
     }
 
-    
 }
-
+}
 
 
 
@@ -128,7 +141,7 @@ body {
 	80% { opacity: 0; }
 	100% { opacity: 0; }
 }
-@-webkit-keyframes topToBottom{
+@keyframes topToBottom{
 	0% { opacity: 0; }
 	5% { opacity: 0; -webkit-transform: translateY(-50px); }
 	10% { opacity: 1; -webkit-transform: translateY(0px); }
@@ -405,58 +418,5 @@ body, .nav, .menu {
 
         // About me
 
-
-        $finalHeight: 250px;
-$finalWidth: 3 * $finalHeight;
-$scrollBarHeight: 1px;
-
-::-webkit-scrollbar {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
-}
-
-::-webkit-scrollbar-button {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
-}
-
-body {
-  background: #111;
-}
-
-#about {
-  box-sizing: border-box;
-}
-
-.horizontal-scroll-wrapper {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: calc(#{$finalHeight} + #{$scrollBarHeight});
-  max-height: $finalWidth;
-  margin: 0;
-  padding-top: $scrollBarHeight;
-  background: #abc;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg) translateY(-$finalHeight);
-  transform-origin: right top;
-  & > div {
-    display: block;
-    padding: 5px;
-    background: #cab;
-    transform: rotate(90deg);
-    transform-origin: right top;
-  }
-}
-
-.squares {
-  padding: $finalHeight 0 0 0;
-  & > div {
-    width: $finalHeight;
-    height: $finalHeight;
-    margin: 10px 0;
-  }
-}
+        
 

@@ -1,11 +1,23 @@
 body {
   width: 100vw;
-  height: 100 vh;
+  height: 100vh;
   margin: 0;
   background-color: red;
   color: rgba(59, 56, 49, 0.909);
   min-width: 100%;
   font-size: 40px;
+}
+body ::-webkit-scrollbar {
+  display: hidden;
+}
+
+.container {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .container {
@@ -16,10 +28,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
-.pages {
-  padding-left: 10%;
-  padding-right: 10%;
+.container .pages {
   display: flex;
   overflow: auto;
   scroll-snap-align: start;
@@ -31,20 +40,22 @@ body {
   color: rgba(209, 200, 176, 0.909);
   background-color: rgb(22, 28, 28);
 }
-
-#home {
-  background-color: rgb(22, 28, 28);
+.container .pages ::-webkit-scrollbar {
+  display: hidden;
 }
-#home #about {
-  display: none;
+.container #loanCalculator {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
-#home #Keino {
+.container #home #Keino {
   font-size: 150px;
   color: #FFB03A;
   font-family: "Telford Town", sans-serif;
   letter-spacing: 0px;
 }
-#home #splash {
+.container #home #splash {
   font-style: italic;
 }
 
@@ -106,6 +117,33 @@ body {
 }
 
 /*topToBottom Animation*/
+@-webkit-keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes topToBottom {
   0% {
     opacity: 0;
@@ -413,54 +451,4 @@ body {
 }
 #loading-text #loadingIdeas {
   text-transform: uppercase;
-}
-
-::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
-}
-
-::-webkit-scrollbar-button {
-  width: 1px;
-  height: 1px;
-}
-
-body {
-  background: #111;
-}
-
-#about {
-  box-sizing: border-box;
-}
-
-.horizontal-scroll-wrapper {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: calc(250px + 1px);
-  max-height: 750px;
-  margin: 0;
-  padding-top: 1px;
-  background: #abc;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg) translateY(-250px);
-  transform-origin: right top;
-}
-.horizontal-scroll-wrapper > div {
-  display: block;
-  padding: 5px;
-  background: #cab;
-  transform: rotate(90deg);
-  transform-origin: right top;
-}
-
-.squares {
-  padding: 250px 0 0 0;
-}
-.squares > div {
-  width: 250px;
-  height: 250px;
-  margin: 10px 0;
 }/*# sourceMappingURL=style.css.map */

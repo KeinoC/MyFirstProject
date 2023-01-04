@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
   <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.cdnfonts.com/css/telford-town" rel="stylesheet">
@@ -13,11 +15,13 @@
     <title>My Personal Website - Phase 0</title>
     <script src="index.js"></script>
   </head>
+
+
   <body>
-
-    
-
     <div class="container">
+
+      <!-- Home Section -->
+
       <div class = "pages" id="home">
         <ul style="list-style: none" id="intro">
           <li class="yellow"> Hi, I'm</li>
@@ -36,6 +40,9 @@
         </span> 
       </section>
       </ul>
+
+<!-- Navigation Bar -->
+
       <div class="nav">
         <input type="checkbox">
           <span></span>
@@ -47,13 +54,18 @@
             <li><a href="#">say hi</a></li>
           </div>
       </div>
+    </div>     
+<!-- About Me Section -->
+
+    <div class = "pages" id="about">
+      <div id="about">
+        <h1> About Me</h1>
       </div>
-      <div class = "pages" id="about">About
-        <div id="about">
-          <h1> About Me</h1>
-          
-        </div>
-      </div>
+    </div>
+
+
+<!-- MyWork Section -->
+    <div>
       <div class = "pages" id="myWork">
         <div class="loading-container">
           <div id="wrapper">
@@ -65,22 +77,36 @@
           </div>
       </div>
       </div>
-      
     </div>
+<!-- Apps -->
+    <div>
+      <div id="loanCalculator" class="pages">
+        <form>
+        <div>
+          <h1> Handy Dandy Loan Calculator</h1>
+        </div>
+          <!-- to call calculate function in index.js -->
+        <div>
 
+          <p> 
+            <label>Amount :</label>
+            <input id="amount" type="number" onchange="calcLoan()">
+          </p>
 
+          <p> Interest Rate :
+            <input id="rate" type="number" onchange="calcLoan()">
+          </p>
 
-
-    <!-- original code below -->
-    <!-- <div id="center">
-      <script src="script.js"></script>
-      <h4 id=greet class="yellow">Hello, my name is</h4>
-      <h1 id="keino">Keino Chichester</h1>
-      <h4 id="title">  Software Engineer & Articifer</h4>
-      <div>
-        <p1> I'm a career Financial Analyst with 8 Years of experience. I worked mainly in </p1>
+          <p>Months to Pay:
+            <input id="months" type="number" onchange="calcLoan()">
+          </p>
+          <div id="total"></div>
+        </form>
+          
+        </div>
       </div>
     </div>
-    <div></div> -->
+      
+    </div>
   </body>
 </html>
