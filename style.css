@@ -106,7 +106,7 @@ body {
 }
 
 /*topToBottom Animation*/
-@-webkit-keyframes topToBottom {
+@keyframes topToBottom {
   0% {
     opacity: 0;
   }
