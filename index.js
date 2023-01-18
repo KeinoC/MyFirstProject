@@ -7,3 +7,13 @@ function calcLoan() {
 
     document.querySelector("#total").innerHTML = "Monthly PMT:" +total;
 }
+
+
+
+///////////////////////////////////////////////////////////////////
+
+
+
+
+
+
